@@ -7,6 +7,10 @@ function Blog() {
 
     const {loading,blogs} = useBlogs();
 
+    if(!localStorage.getItem('token')){
+        location.href = '/signup'
+    }
+
     if(loading){
         return <div>
             <Appbar/>
