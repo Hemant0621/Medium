@@ -20,7 +20,7 @@ userRouter.post('/signup', async (c) => {
   if (!success) {
     c.status(400)
     return c.json({
-      message: "wrong input formate"
+      message: "wrong input format"
     })
   }
 
