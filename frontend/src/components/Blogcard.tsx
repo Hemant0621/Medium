@@ -50,7 +50,13 @@ function Blogcard({
 }
 
 export function Avatar({ name, size = "small" }: { name: String, size: "small" | "big" }) {
-    return <div className={`relative inline-flex items-center justify-center ${size == "small" ? "w-7 h-7" : " w-10 h-10"} overflow-hidden bg-slate-400 rounded-full dark:bg-gray-600`}>
+    return <div className={`relative inline-flex items-center justify-center ${size == "small" ? "w-7 h-7" : " w-10 h-10"} overflow-hidden bg-slate-400 rounded-full dark:bg-gray-600`} onClick={()=>{
+        const message = confirm("Do you want to logout")
+        if(message){
+            localStorage.setItem('token','')
+            location.href = '/signin'
+        }
+    }}>
         <span className={`font-light text-white ${size == "small" ? "text-sm" : " text-md"} `}>
             {name[0]}
         </span>
