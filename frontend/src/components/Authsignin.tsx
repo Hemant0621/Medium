@@ -14,6 +14,7 @@ export default function Authsignin() {
         try {
             const response = await axios.post(`${BACKEND_URL}/api/v1/user/signin`,signininputs)
             localStorage.setItem('token' , response.data.jwt)
+            location.href = '/'
         } catch (error) {
             console.log(error)
         }
@@ -84,10 +85,7 @@ export default function Authsignin() {
                             <button
                                 type="button"
                                 className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                                onClick={()=>{
-                                    sendrequest
-                                    location.href = '/'
-                                }} 
+                                onClick={sendrequest} 
                             >
                                 Sign in
                             </button>
