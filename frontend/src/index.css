@@ -1,0 +1,10 @@
+@tailwind baese;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+    body{
+        margin: 0;
+        padding: 0;
+    }
+}

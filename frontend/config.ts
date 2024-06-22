@@ -1,0 +1,1 @@
+export const BACKEND_URL:String = 'https://medium.hemant-kumar-2335-h.workers.dev'

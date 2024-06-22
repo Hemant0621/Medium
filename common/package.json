@@ -1,0 +1,17 @@
+{
+  "name": "@hemant0621/common",
+  "version": "1.0.1",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@hemant0621/common": "^1.0.1",
+    "vi": "^1.0.0",
+    "zod": "^3.23.8"
+  }
+}
